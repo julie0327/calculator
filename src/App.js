@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { default as NumberFormat } from 'react-number-format';
+import {  NumericFormat } from 'react-number-format';
 
 
 
@@ -90,8 +90,8 @@ function App() {
       <div className='wrapper'>
         <div className='screen'>
           {input !== '' || input === '0'
-            ? (<NumberFormat value={input} display={'text'} thousandSeparator={true} />)
-            : (<NumberFormat value={preState} display={'text'} thousandSeparator={true} />)}
+            ? (<NumericFormat value={input} displayType='text' thousandSeparator={true} />)
+            : (<NumericFormat value={preState} displayType='text' thousandSeparator={true} />)}
         </div>
         <div className='btn light-top' onClick={reset}>AC</div>
         <div className='btn light-top' onClick={percent}>%</div>
